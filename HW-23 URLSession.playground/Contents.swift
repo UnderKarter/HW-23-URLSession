@@ -26,3 +26,10 @@ func getData(urlRequest: String) {
         
     }.resume()
 }
+
+let baseWeatherUrl = "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?"
+let nineDayEngWeather = baseWeatherUrl + "dataType=fnd&lang=eng"
+let nineDayChWeather = baseWeatherUrl + "dataType=fnd&lang=tc"
+
+getData(urlRequest: nineDayEngWeather)
+getData(urlRequest: nineDayChWeather)
